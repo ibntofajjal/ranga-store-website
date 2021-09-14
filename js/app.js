@@ -136,8 +136,7 @@ const loadProducts = () => {
     },
     {
       id: 14,
-      title:
-        "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      title: "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor",
       price: 999.99,
       description:
         "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
@@ -218,17 +217,17 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
-      <div class="single-product">
-      <div>
-      <img class="product-image" src=${image}></img>
-     </div>
-     <h3>${product.title}</h3>
-     <p>Category: ${product.category}</p>
-     <p><b class="text-success">Rating Count:</b> ${product.rating.count}</p>
-     <p><b class="text-warning">Rating Rate:</b> ${product.rating.rate}</p>
-     <h2>Price: $ ${product.price}</h2>
-     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-     <button id="details-btn" class="btn btn-danger">Details</button>
+      <div class="card h-200 single-product">
+          <img class="product-image img-fluid" src=${image}></img>
+          <div class="card-body">
+              <h3 class="card-title">${product.title}</h3>
+                  <p class="card-text">Category: ${product.category}</p>
+                  <p class="card-text"<b class="text-success">Rating Count:</b> ${product.rating.count}</p>
+                  <p class="card-text"><b class="text-warning">Rating Rate:</b> ${product.rating.rate}</p>
+                  <h2 class="card-text">Price: $ ${product.price}</h2>
+                  <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+                  <button id="details-btn" class="btn btn-danger">Details</button>
+            </div>
       </div>
       `;
     document.getElementById("all-products").appendChild(div);
