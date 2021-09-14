@@ -222,7 +222,7 @@ const showProducts = (products) => {
           <div class="card-body">
               <h3 class="card-title">${product.title}</h3>
                   <p class="card-text">Category: ${product.category}</p>
-                  <p class="card-text"<b class="text-success">Rating Count:</b> ${product.rating.count}</p>
+                  <p class="card-text"></p><b class="text-success">Rating Count:</b> ${product.rating.count}</p>
                   <p class="card-text"><b class="text-warning">Rating Rate:</b> ${product.rating.rate}</p>
                   <h2 class="card-text">Price: $ ${product.price}</h2>
                   <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
